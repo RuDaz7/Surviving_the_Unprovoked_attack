@@ -25,5 +25,5 @@
 <img width="50%" src="https://github.com/assets/90640499/7a8fe326-2bcd-4968-8e05-f578f14142dc"/>
   
 + ## 게임 방법
-[조작법 ⌨](https://github.com/RuDaz7/2D_Game-The-Mosquito-/issues/7#issue-1525499815)  
+[조작법 & 스킬 & 아이템 ⌨](https://github.com/RuDaz7/Surviving_the_Unprovoked_attack/issues/2)  
 [승리 조건👊](https://github.com/RuDaz7/Surviving_the_Unprovoked_attack/issues/1)  
