@@ -1,4 +1,7 @@
-# 묻지마 폭행에서 살아남기_Surviving the Unprovoked attack
+# 묻지마 폭행에서 살아남기_Surviving the Unprovoked attack  
+
+---  
+
 ## "묻지마 폭행"으로부터 나 자신과 시민들을 구한다.
 + # 기획 동기
 > ### 묻지마 폭행(묻지마 테러)는 2020년부터 하루 평균 100건 이상씩 보고 되고있다.
@@ -26,4 +29,9 @@
   
 + ## 게임 방법
 [조작법 & 스킬 & 아이템 ⌨](https://github.com/RuDaz7/Surviving_the_Unprovoked_attack/issues/2)  
+
+---  
+
 [승리 조건👊](https://github.com/RuDaz7/Surviving_the_Unprovoked_attack/issues/1)  
+
+---  
