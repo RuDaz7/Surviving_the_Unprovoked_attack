@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public float WalkSpeed = 5.0f;
     public Animator anim;
     Camera _camera;
     CharacterController _Cotroller;
+    public float WalkSpeed = 5.0f;
     public float RunSpeed = 10.0f;
     public float FinalSpeed;
     public bool cameraRot; //둘러보기 기능
@@ -28,15 +28,9 @@ public class Player : MonoBehaviour
             Run = true;
         }
         else
-            {
-                Run = false;
-            }
-
-        // float WalkHorizontal = Input.GetAxis("Horizontal");
-        // float WalkVertical = Input.GetAxis("Vertical");
-        // transform.Translate(Vector3.right * Time.deltaTime * WalkSpeed * WalkHorizontal, Space.World);
-        // transform.Translate(Vector3.forward  * Time.deltaTime * WalkSpeed * WalkVertical, Space.World);
-
+        {
+            Run = false;
+        }
         if (Input.GetKey(KeyCode.CapsLock))
         {
             cameraRot = true;
@@ -61,10 +55,10 @@ public class Player : MonoBehaviour
     {
         FinalSpeed = (Run) ? RunSpeed : WalkSpeed; //만약에 뛴다면 런스피트 아니라면 워크스피드
 
-        Vector3 forward = transform.TransformDirection(Vector3.forward);
-        Vector3 right = transform.TransformDirection(Vector3.right);
+        Vector3 forward = transform.TransformDirection(Vector3.forward); //디렉션은 방향
+        Vector3 right = transform.TransformDirection(Vector3.right); //라이트는 지상에서x좌표를 뜻함
         Vector3 MoveDir = forward * Input.GetAxisRaw("Vertical") + right * Input.GetAxisRaw("Horizontal"); //Raw는 키보드의 부드러움을 뺌 보다 즉각적 반응
-        _Cotroller.Move(MoveDir.normalized * FinalSpeed * Time.deltaTime);
+        _Cotroller.Move(MoveDir.normalized * FinalSpeed * Time.deltaTime); //Move메소드 사용
 
         float percent = ((Run) ? 1 : 0.5f) * MoveDir.magnitude;
         anim.SetFloat("Blend", percent, 0.1f, Time.deltaTime);

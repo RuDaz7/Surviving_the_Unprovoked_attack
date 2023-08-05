@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerCam : MonoBehaviour
 {
-    public Transform Player; // 따라가야할 오브젝트 정보
-    public float CamSpeed = 10.0f; //따라갈 스피드
+    public Transform FindPlayer; // 따라가야할 오브젝트 정보
+    public float CamSpeed = 30.0f; //따라갈 스피드
     public float MouseSensitivity = 100.0f; //마우스 감도
     public float CamAngle = 70.0f; //카메라 각도 제한
     private float Mouse_Rot_X; //입력받을 마우스 x축 값
@@ -40,14 +40,14 @@ public class PlayerCam : MonoBehaviour
         Mouse_Rot_X += -(Input.GetAxis("Mouse Y")) * MouseSensitivity * Time.deltaTime;
         Mouse_Rot_Y += Input.GetAxis("Mouse X") * MouseSensitivity * Time.deltaTime;
 
-        Mouse_Rot_X = Mathf.Clamp(Mouse_Rot_X, -CamAngle, CamAngle); //최소값, 최대값
+        Mouse_Rot_X = Mathf.Clamp(Mouse_Rot_X, -CamAngle, CamAngle); //앵글최소값, 최대값
         Quaternion rot = Quaternion.Euler(Mouse_Rot_X, Mouse_Rot_Y, 0);
         transform.rotation = rot;
     }
     //레이트 엡데이트란, 업데이트가 끝난 다음 동작하는 함수   
     void LateUpdate() 
     {
-        transform.position = Vector3.MoveTowards(transform.position, Player.position, CamSpeed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, FindPlayer.position, CamSpeed * Time.deltaTime);
         Finaldir = transform.TransformPoint(dir * MaxDistance); //로컬스페이스에서 > 월드스페이스로 트랜스폼 바꿔줌
         //카메라 사이에 방해물 존재 여부 판단하는법
 
