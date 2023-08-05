@@ -35,3 +35,7 @@
 [승리 조건👊](https://github.com/RuDaz7/Surviving_the_Unprovoked_attack/issues/1)  
 
 ---  
+
+[보스 업데이트😈](https://github.com/RuDaz7/Surviving_the_Unprovoked_attack/issues/3)  
+
+---  
