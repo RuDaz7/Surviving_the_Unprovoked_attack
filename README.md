@@ -38,4 +38,6 @@
 
 [보스 업데이트😈](https://github.com/RuDaz7/Surviving_the_Unprovoked_attack/issues/3)  
 
+[버그 수정🛠️]
+
 ---  
