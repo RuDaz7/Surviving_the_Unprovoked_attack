@@ -1,4 +1,4 @@
-# 묻지마 폭행에서 살아남기 Surviving the Unprovoked attacks  
+# 묻지마 폭행에서 살아남기 Surviving the Unprovoked attack  
 
 ---  
 
